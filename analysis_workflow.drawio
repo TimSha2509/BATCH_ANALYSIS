@@ -1,0 +1,108 @@
+<mxfile host="Electron" agent="Codex">
+  <diagram id="analysis-workflow" name="Analysis workflow">
+    <mxGraphModel dx="2020" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" background="#F7FAFB" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge-9-10" edge="1" parent="1" source="step-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.49;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;" target="step-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1736" y="660" as="sourcePoint" />
+            <mxPoint x="880" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="top-rule" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#147F96;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="14" width="1920" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=45;fontStyle=1;fontColor=#17323F;" value="Automated droplet / capsule image analysis" vertex="1">
+          <mxGeometry height="55" width="1100" x="90" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=21;fontColor=#506975;" value="Batch orchestration, segmentation, particle measurement, metadata integration, and quality control" vertex="1">
+          <mxGeometry height="35" width="1200" x="90" y="93" as="geometry" />
+        </mxCell>
+        <mxCell id="step-4" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;shadow=1;strokeWidth=3;fontFamily=Arial;align=center;verticalAlign=middle;spacing=14;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size: 25px&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Crop &amp;amp; grayscale converison&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size: 25px&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size: 25px&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="350" width="270" x="231" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Arial;fontSize=19;fontStyle=1;strokeWidth=3;" value="2" vertex="1">
+          <mxGeometry height="38" width="38" x="239" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="step-5" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;shadow=1;strokeWidth=3;fontFamily=Arial;align=center;verticalAlign=middle;spacing=14;fontSize=12;fontStyle=0;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size: 25px&quot;&gt;Background correction&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size: 25px&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size: 25px&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="350" width="270" x="538" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Arial;fontSize=19;fontStyle=1;strokeWidth=3;" value="3" vertex="1">
+          <mxGeometry height="38" width="38" x="549" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="step-7" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;shadow=1;strokeWidth=3;fontFamily=Arial;align=center;verticalAlign=middle;spacing=14;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size: 25px&quot;&gt;Contrast enhancement&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="350" width="270" x="848" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Arial;fontSize=19;fontStyle=1;strokeWidth=3;" value="4" vertex="1">
+          <mxGeometry height="38" width="38" x="858" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="step-8" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;shadow=1;strokeWidth=3;fontFamily=Arial;align=center;verticalAlign=middle;spacing=14;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 25px;&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 25px;&quot;&gt;Binary mask conversion&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="350" width="270" x="1158" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Arial;fontSize=19;fontStyle=1;strokeWidth=3;" value="5" vertex="1">
+          <mxGeometry height="38" width="38" x="1169" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="step-9" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;shadow=1;strokeWidth=3;fontFamily=Arial;align=center;verticalAlign=middle;spacing=12;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213)); font-size: 25px;&quot;&gt;Labelling&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(23, 50, 63), rgb(179, 202, 213)); font-size: 25px;&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;font-size: 25px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="350" width="210" x="1479" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-9" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Arial;fontSize=19;fontStyle=1;strokeWidth=3;" value="6" vertex="1">
+          <mxGeometry height="38" width="38" x="1488" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="step-10" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;shadow=1;strokeWidth=3;fontFamily=Arial;align=center;verticalAlign=middle;spacing=14;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;&lt;span style=&quot;font-size: 25px; line-height: 140%;&quot;&gt;Measurement and integration&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: rgb(63, 89, 102);&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Limits for minimum particle size and limits for circularity, relate detected droplets to in-process conditions&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&amp;nbsp;Calculate area, ECD, perimeter, axes,&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(82, 107, 119);&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;convert px → mm&lt;/font&gt;&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="185" width="520" x="625" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Arial;fontSize=19;fontStyle=1;strokeWidth=3;" value="7" vertex="1">
+          <mxGeometry height="38" width="38" x="640" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-3-4" edge="1" parent="1" source="step-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.505;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;" target="step-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-4-5" edge="1" parent="1" source="step-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=-0.01;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="step-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="549" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-5-6" edge="1" parent="1" source="step-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=-0.01;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="step-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="830" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-7-8" edge="1" parent="1" source="step-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=-0.01;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="step-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="metadata-edge" edge="1" parent="1" source="step-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;dashed=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=1.005;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="step-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="270" />
+              <mxPoint x="1730" y="872.5" />
+            </Array>
+            <mxPoint x="850" y="220" as="sourcePoint" />
+            <mxPoint x="940" y="809.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vnmVN4o0z8LIFhaDH9fK-10" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;dashed=1;dashPattern=9 8;endArrow=block;endFill=1;exitX=0.5;exitY=0;entryX=0.5;entryY=0;exitDx=0;exitDy=0;" target="step-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="850" y="220" as="sourcePoint" />
+            <mxPoint x="940" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step-3" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;shadow=1;strokeWidth=3;fontFamily=Arial;align=center;verticalAlign=middle;spacing=12;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b style=&quot;font-size: 25px&quot;&gt;Experiment-level input&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3f5966&quot;&gt;Information on process conditions and in process metadata&lt;/font&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="630" x="570" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Arial;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;strokeWidth=3;" value="1" vertex="1">
+          <mxGeometry height="38" width="38" x="580" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="pa2vHuZ30XQoiVWjQ4pA-1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=-0.012;entryY=0.497;entryDx=0;entryDy=0;entryPerimeter=0;" target="step-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1428" y="548.8" as="sourcePoint" />
+            <mxPoint x="1468" y="548.8" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

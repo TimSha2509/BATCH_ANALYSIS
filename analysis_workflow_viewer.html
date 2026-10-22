@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automated droplet and capsule image analysis</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #ffffff; font-family: Arial, sans-serif; }
+    h1 { color: #243447; font-size: 26px; text-align: center; }
+    .mermaid { display: flex; justify-content: center; }
+  </style>
+</head>
+<body>
+  <h1>Automated droplet/capsule image analysis</h1>
+  <pre class="mermaid">
+flowchart TD
+    A[Input JPEG images] --> B[Crop fixed region of interest]
+    B --> C[Convert image to grayscale]
+    C --> D[Estimate background with Gaussian blur]
+    D --> E[Subtract image from background]
+    E --> F[Normalize and enhance contrast]
+    F --> G[Apply fixed intensity threshold]
+    G --> H[Remove small objects]
+    H --> I[Fill holes and clear image borders]
+    I --> J[Label connected particles]
+    J --> K[Measure size shape and intensity]
+    K --> L{Particle accepted}
+    L -->|No| M[Reject object]
+    L -->|Yes| N[Convert pixels to physical units]
+    N --> O[Add experiment material and nozzle metadata]
+    O --> P[Calculate dimensionless droplet diameter]
+    P --> Q[Export particle CSV files]
+    Q --> R[Export overlays and quality control panels]
+  </pre>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10.3.0/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, theme: "base", securityLevel: "strict" });
+  </script>
+</body>
+</html>

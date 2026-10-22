@@ -1,0 +1,55 @@
+graph LR
+
+subgraph INPUT [1. Image and experiment input]
+    A1["Discover run and combo folders"]
+    A2{"Already analyzed?"}
+    A3["JPEG images<br/>Dark droplets or capsules on bright background"]
+    A4["Read metadata<br/>step.json, scale.csv, oscilloscope.csv"]
+    A5["Retain registry entry"]
+    A1 --> A2
+    A2 -->|No| A3
+    A2 -->|No| A4
+    A2 -->|Yes| A5
+end
+
+subgraph SEGMENTATION [2. Pre-processing and segmentation]
+    B1["Crop fixed region of interest<br/>x 690, y 10, width 1660, height 3900 px"]
+    B2["Convert to grayscale"]
+    B3["Estimate local background<br/>Gaussian blur with sigma 80 px"]
+    B4["Correct illumination<br/>Background intensity minus gray intensity"]
+    B5["Normalize contrast to 0-255"]
+    B6["Enhance faint particles<br/>Values above 5 multiplied by 2.5"]
+    B7["Apply fixed threshold<br/>Enhanced intensity above 2"]
+    B8["Clean binary mask<br/>Remove small objects, fill holes, clear borders"]
+    B9["Label connected components<br/>Watershed disabled"]
+    B1 --> B2 --> B3 --> B4 --> B5 --> B6 --> B7 --> B8 --> B9
+end
+
+subgraph QUANTIFICATION [3. Particle selection and quantification]
+    C1["Measure labeled regions<br/>Area, perimeter, centroid, axes and intensity"]
+    C2["Calculate shape descriptors<br/>Circularity, eccentricity and solidity"]
+    C3{"Meets acceptance criteria?"}
+    C4["Retain particle<br/>Area at least 20 px2<br/>Circularity from 0.50 to 1.10"]
+    C5["Reject object"]
+    C6["Apply calibration<br/>0.01742 mm per pixel"]
+    C7["Report physical descriptors<br/>Area, ECD, perimeter, axes and centroid"]
+    C1 --> C2 --> C3
+    C3 -->|Yes| C4
+    C3 -->|No| C5
+    C4 --> C6 --> C7
+end
+
+subgraph OUTPUT [4. Contextualization and output]
+    D1["Add experimental metadata<br/>Material, nozzle, pump speed, frequency and displacement"]
+    D2["Calculate dimensionless diameter<br/>ECD divided by nozzle inner diameter"]
+    D3["Export tabular results<br/>Combo CSV, ALL_PARTICLE_RESULTS and ALL_RUNS"]
+    D4["Export visual quality control<br/>Labeled overlays and six-stage QC panels"]
+    D5["Update analysis registry<br/>Status, image count, particle count and output path"]
+    D1 --> D2 --> D3 --> D5
+end
+
+A3 --> B1
+A4 --> D1
+B9 --> C1
+B9 --> D4
+C7 --> D1

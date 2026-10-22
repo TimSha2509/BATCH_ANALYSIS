@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Automated droplet and capsule image-analysis workflow</title>
+  <desc id="desc">Editable scientific workflow diagram showing batch discovery and metadata extraction, image preprocessing, segmentation, particle measurement, data enrichment, and quality-control and CSV outputs.</desc>
+
+  <!-- All text, shapes, and connectors are native SVG elements and remain editable. -->
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#45606f"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#147f96"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1b3642" flood-opacity="0.13"/>
+    </filter>
+    <style>
+      .title { font-family: Arial, Helvetica, sans-serif; font-size: 45px; font-weight: 700; fill: #17323f; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 21px; fill: #506975; }
+      .lane { font-family: Arial, Helvetica, sans-serif; font-size: 19px; font-weight: 700; letter-spacing: 1.4px; fill: #45606f; }
+      .stepno { font-family: Arial, Helvetica, sans-serif; font-size: 19px; font-weight: 700; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
+      .boxhead { font-family: Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 700; fill: #17323f; text-anchor: middle; }
+      .boxbody { font-family: Arial, Helvetica, sans-serif; font-size: 18px; fill: #3f5966; text-anchor: middle; }
+      .small { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #526b77; text-anchor: middle; }
+      .outhead { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: 700; fill: #17323f; }
+      .outbody { font-family: Arial, Helvetica, sans-serif; font-size: 17px; fill: #465f6b; }
+      .connector { fill: none; stroke: #45606f; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .connectorBlue { fill: none; stroke: #147f96; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-blue); }
+      .dash { fill: none; stroke: #91a5af; stroke-width: 3; stroke-dasharray: 9 8; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#f7fafb"/>
+  <rect x="0" y="0" width="1920" height="14" fill="#147f96"/>
+
+  <text id="diagram-title" x="90" y="78" class="title">Automated droplet / capsule image analysis</text>
+  <text x="90" y="113" class="subtitle">Batch orchestration, segmentation, particle measurement, metadata integration, and quality control</text>
+
+  <!-- Lane labels -->
+  <text x="90" y="180" class="lane">EXPERIMENT-LEVEL INPUT</text>
+  <line x1="90" y1="194" x2="1830" y2="194" stroke="#d4e0e5" stroke-width="2"/>
+  <text x="90" y="386" class="lane">PER-IMAGE ANALYSIS</text>
+  <line x1="90" y1="400" x2="1830" y2="400" stroke="#d4e0e5" stroke-width="2"/>
+  <text x="90" y="755" class="lane">MEASUREMENT, INTEGRATION &amp; OUTPUT</text>
+  <line x1="90" y1="769" x2="1830" y2="769" stroke="#d4e0e5" stroke-width="2"/>
+
+  <!-- Top row -->
+  <g id="step-1-discovery" filter="url(#shadow)">
+    <rect x="90" y="220" width="410" height="125" rx="18" fill="#e7f4f6" stroke="#147f96" stroke-width="2.5"/>
+    <circle cx="120" cy="250" r="19" fill="#147f96"/>
+    <text x="120" y="251" class="stepno">1</text>
+    <text x="295" y="258" class="boxhead">Discover experiment folders</text>
+    <text x="295" y="291" class="boxbody">run / steps / combo_* / images / *.jpg</text>
+    <text x="295" y="320" class="small">Skip completed combinations via registry</text>
+  </g>
+
+  <path d="M500 282 H570" class="connectorBlue"/>
+
+  <g id="step-2-metadata" filter="url(#shadow)">
+    <rect x="580" y="220" width="540" height="125" rx="18" fill="#e7f4f6" stroke="#147f96" stroke-width="2.5"/>
+    <circle cx="610" cy="250" r="19" fill="#147f96"/>
+    <text x="610" y="251" class="stepno">2</text>
+    <text x="850" y="258" class="boxhead">Read process metadata</text>
+    <text x="850" y="291" class="boxbody">step.json + scale.csv + oscilloscope.csv</text>
+    <text x="850" y="320" class="small">Material, nozzle, speed, flow, frequency, displacement</text>
+  </g>
+
+  <path d="M1120 282 H1190" class="connectorBlue"/>
+
+  <g id="step-3-image-loop" filter="url(#shadow)">
+    <rect x="1200" y="220" width="630" height="125" rx="18" fill="#e7f4f6" stroke="#147f96" stroke-width="2.5"/>
+    <circle cx="1230" cy="250" r="19" fill="#147f96"/>
+    <text x="1230" y="251" class="stepno">3</text>
+    <text x="1515" y="258" class="boxhead">Process each JPEG image</text>
+    <text x="1515" y="291" class="boxbody">Standardized configuration applied to every image</text>
+    <text x="1515" y="320" class="small">Pixel size: 0.01742 mm px⁻¹  •  fixed region of interest</text>
+  </g>
+
+  <!-- Down connector into image workflow -->
+  <path d="M1515 345 V370 H235 V425" class="connectorBlue"/>
+
+  <!-- Middle row: six process boxes -->
+  <g id="step-4-crop-gray" filter="url(#shadow)">
+    <rect x="90" y="435" width="270" height="220" rx="18" fill="#ffffff" stroke="#8aa4b0" stroke-width="2.5"/>
+    <circle cx="120" cy="465" r="19" fill="#607f8e"/>
+    <text x="120" y="466" class="stepno">4</text>
+    <text x="225" y="500" class="boxhead">Crop &amp; grayscale</text>
+    <text x="225" y="529" class="boxbody">ROI: x = 690, y = 10</text>
+    <text x="225" y="558" class="boxbody">1660 × 3900 px</text>
+    <line x1="125" y1="585" x2="325" y2="585" stroke="#dbe5e9" stroke-width="2"/>
+    <text x="225" y="617" class="small">BGR → 8-bit grayscale</text>
+  </g>
+
+  <path d="M360 545 H390" class="connector"/>
+
+  <g id="step-5-background" filter="url(#shadow)">
+    <rect x="400" y="435" width="270" height="220" rx="18" fill="#ffffff" stroke="#8aa4b0" stroke-width="2.5"/>
+    <circle cx="430" cy="465" r="19" fill="#607f8e"/>
+    <text x="430" y="466" class="stepno">5</text>
+    <text x="535" y="500" class="boxhead">Background correct</text>
+    <text x="535" y="529" class="boxbody">Gaussian background</text>
+    <text x="535" y="558" class="boxbody">σ = 80 px</text>
+    <line x1="435" y1="585" x2="635" y2="585" stroke="#dbe5e9" stroke-width="2"/>
+    <text x="535" y="613" class="small">background − grayscale</text>
+    <text x="535" y="636" class="small">dark particles → bright signal</text>
+  </g>
+
+  <path d="M670 545 H700" class="connector"/>
+
+  <g id="step-6-enhance" filter="url(#shadow)">
+    <rect x="710" y="435" width="270" height="220" rx="18" fill="#ffffff" stroke="#8aa4b0" stroke-width="2.5"/>
+    <circle cx="740" cy="465" r="19" fill="#607f8e"/>
+    <text x="740" y="466" class="stepno">6</text>
+    <text x="845" y="500" class="boxhead">Enhance contrast</text>
+    <text x="845" y="529" class="boxbody">For intensity &gt; 5:</text>
+    <text x="845" y="558" class="boxbody">multiply by 2.5</text>
+    <line x1="745" y1="585" x2="945" y2="585" stroke="#dbe5e9" stroke-width="2"/>
+    <text x="845" y="617" class="small">Clip to 0–255</text>
+  </g>
+
+  <path d="M980 545 H1010" class="connector"/>
+
+  <g id="step-7-threshold" filter="url(#shadow)">
+    <rect x="1020" y="435" width="270" height="220" rx="18" fill="#ffffff" stroke="#8aa4b0" stroke-width="2.5"/>
+    <circle cx="1050" cy="465" r="19" fill="#607f8e"/>
+    <text x="1050" y="466" class="stepno">7</text>
+    <text x="1155" y="500" class="boxhead">Threshold</text>
+    <text x="1155" y="529" class="boxbody">Fixed threshold</text>
+    <text x="1155" y="558" class="boxbody">signal &gt; 2</text>
+    <line x1="1055" y1="585" x2="1255" y2="585" stroke="#dbe5e9" stroke-width="2"/>
+    <text x="1155" y="617" class="small">Binary particle mask</text>
+  </g>
+
+  <path d="M1290 545 H1320" class="connector"/>
+
+  <g id="step-8-mask-cleanup" filter="url(#shadow)">
+    <rect x="1330" y="435" width="270" height="220" rx="18" fill="#ffffff" stroke="#8aa4b0" stroke-width="2.5"/>
+    <circle cx="1360" cy="465" r="19" fill="#607f8e"/>
+    <text x="1360" y="466" class="stepno">8</text>
+    <text x="1465" y="500" class="boxhead">Clean mask</text>
+    <text x="1465" y="527" class="boxbody">Remove small objects</text>
+    <text x="1465" y="556" class="boxbody">Fill holes</text>
+    <text x="1465" y="585" class="boxbody">Clear border objects</text>
+    <line x1="1365" y1="608" x2="1565" y2="608" stroke="#dbe5e9" stroke-width="2"/>
+    <text x="1465" y="636" class="small">Opening / closing disabled</text>
+  </g>
+
+  <path d="M1600 545 H1630" class="connector"/>
+
+  <g id="step-9-label" filter="url(#shadow)">
+    <rect x="1640" y="435" width="190" height="220" rx="18" fill="#ffffff" stroke="#8aa4b0" stroke-width="2.5"/>
+    <circle cx="1670" cy="465" r="19" fill="#607f8e"/>
+    <text x="1670" y="466" class="stepno">9</text>
+    <text x="1735" y="511" class="boxhead">Label</text>
+    <text x="1735" y="548" class="boxbody">Connected</text>
+    <text x="1735" y="575" class="boxbody">components</text>
+    <line x1="1670" y1="603" x2="1800" y2="603" stroke="#dbe5e9" stroke-width="2"/>
+    <text x="1735" y="632" class="small">Watershed off</text>
+  </g>
+
+  <!-- Bottom row -->
+  <path d="M1735 655 V705 H350 V800" class="connector"/>
+
+  <g id="step-10-measure" filter="url(#shadow)">
+    <rect x="90" y="810" width="520" height="185" rx="18" fill="#eef0fa" stroke="#596bb1" stroke-width="2.5"/>
+    <circle cx="120" cy="840" r="19" fill="#596bb1"/>
+    <text x="120" y="841" class="stepno">10</text>
+    <text x="350" y="850" class="boxhead">Filter &amp; measure particles</text>
+    <text x="350" y="889" class="boxbody">Area ≥ 20 px²  •  circularity 0.50–1.10</text>
+    <text x="350" y="922" class="boxbody">Area, ECD, perimeter, axes, centroid</text>
+    <text x="350" y="952" class="small">Shape and grayscale-intensity descriptors; convert px → mm</text>
+  </g>
+
+  <path d="M610 902 H680" class="connector"/>
+
+  <g id="step-11-enrich" filter="url(#shadow)">
+    <rect x="690" y="810" width="500" height="185" rx="18" fill="#fff4e5" stroke="#d58b28" stroke-width="2.5"/>
+    <circle cx="720" cy="840" r="19" fill="#d58b28"/>
+    <text x="720" y="841" class="stepno">11</text>
+    <text x="940" y="850" class="boxhead">Enrich particle table</text>
+    <text x="940" y="889" class="boxbody">Process settings + measured pump speed</text>
+    <text x="940" y="922" class="boxbody">Material properties + nozzle diameter</text>
+    <text x="940" y="952" class="small">Calculate dimensionless diameter d<tspan baseline-shift="sub" font-size="13">d</tspan>/d<tspan baseline-shift="sub" font-size="13">i</tspan></text>
+  </g>
+
+  <path d="M1190 902 H1260" class="connector"/>
+
+  <g id="step-12-output" filter="url(#shadow)">
+    <rect x="1270" y="810" width="560" height="185" rx="18" fill="#d7f8e2" stroke="#26894b" stroke-width="2.5"/>
+    <circle cx="1300" cy="840" r="19" fill="#26894b"/>
+    <text x="1300" y="841" class="stepno">12</text>
+    <text x="1550" y="850" class="boxhead">Export &amp; quality control</text>
+    <g transform="translate(1335,881)">
+      <circle cx="0" cy="0" r="6" fill="#26894b"/><text x="17" y="6" class="outbody">Per-combination particle CSV</text>
+      <circle cx="0" cy="35" r="6" fill="#26894b"/><text x="17" y="41" class="outbody"><tspan x="17" dy="0">Combined particle and run</tspan><tspan x="17" dy="20">summaries</tspan></text>
+      <circle cx="300" cy="0" r="6" fill="#26894b"/><text x="317" y="6" class="outbody">Labeled overlays</text>
+      <circle cx="300" cy="35" r="6" fill="#26894b"/><text x="317" y="41" class="outbody"><tspan x="317" dy="0">QC panels (every</tspan><tspan x="317" dy="20">10th image)</tspan></text>
+    </g>
+    <text x="1550" y="976" class="small">Registry updated with status and particle count</text>
+  </g>
+
+  <!-- Metadata relationship -->
+  <path d="M850 345 V375 H995 V780 H940 V800" class="dash"/>
+  <rect x="805" y="678" width="270" height="39" rx="19" fill="#f7fafb" stroke="#b8c7ce"/>
+  <text x="940" y="703" class="small">metadata joined after measurement</text>
+
+  <!-- Footer -->
+  <text x="90" y="1044" class="small" text-anchor="start">Current configuration shown; optional Otsu, relaxed-Otsu, percentile, adaptive thresholding, morphology, and watershed are implemented but inactive.</text>
+  <text x="1830" y="1044" class="small" text-anchor="end">Vector artwork • editable SVG</text>
+</svg>
